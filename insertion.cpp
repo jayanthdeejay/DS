@@ -2,8 +2,12 @@
 using namespace std;
 int main() {
     int A[100]={0}, val;
-    cout<<"Enter number of integers to be sorted: ";
-    cin>>val;
+    while(1) {
+        cout<<"Enter number of integers to be sorted(<=100): ";
+        cin>>val;
+        if(val>2 && val<101)
+            break;
+    }
     cout<<"Enter array elements:"<<endl;
     for(int i=0;i<val;i++) {
         cin>>A[i];

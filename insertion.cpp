@@ -5,7 +5,7 @@ int main() {
     while(1) {
         cout<<"Enter number of integers to be sorted(<=100): ";
         cin>>val;
-        if(val>2 && val<101)
+        if(val>1 && val<101)
             break;
     }
     cout<<"Enter array elements:"<<endl;

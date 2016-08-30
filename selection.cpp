@@ -1,3 +1,4 @@
+#Selection sort algorithm implementation as described in CLRS
 #include<iostream>
 using namespace std;
 int main() {
@@ -15,13 +16,17 @@ int main() {
     }
     int i=0, j=0;
     while(j<val-1) {
-        int key=A[j];
+        int key=A[j],index=0;
         for(i=j+1;i<val;i++) {
-            if(A[j]>A[i]) {
-                int temp=A[i];
-                A[i]=A[j];
-                A[j]=temp;
+            if(key>A[i]){
+                key=A[i];
+                index=i;
             }
+        }
+        if(A[j]>A[index] && index!=0) {
+            int temp=A[index];
+            A[index]=A[j];
+            A[j]=temp;
         }
         j++;
     }

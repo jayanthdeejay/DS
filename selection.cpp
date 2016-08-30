@@ -17,13 +17,13 @@ int main() {
     int i=0, j=0;
     while(j<val-1) {
         int key=A[j],index=0;
-        for(i=j+1;i<val;i++) {
+        for(i=j+1;i<val;i++) { //Loop to find the next smallest element
             if(key>A[i]){
                 key=A[i];
                 index=i;
             }
         }
-        if(A[j]>A[index] && index!=0) {
+        if(A[j]>A[index] && index!=0) { //Swap the next smallest element with the selected element
             int temp=A[index];
             A[index]=A[j];
             A[j]=temp;
